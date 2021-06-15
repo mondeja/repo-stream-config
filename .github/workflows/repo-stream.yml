@@ -1,0 +1,24 @@
+```yaml
+name: repo-stream update
+
+on:
+  schedule:
+    - cron: 0 4 1/7 * *
+  workflow_dispatch:
+
+jobs:
+  auto-update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - name: Install repo-stream
+        run: pip install repo-stream
+      - name: Run repo-stream update
+        run: repo-stream mondeja
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
