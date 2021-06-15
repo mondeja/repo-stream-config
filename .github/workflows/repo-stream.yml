@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  auto-update:
+  repo-stream-update:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -17,6 +17,9 @@ jobs:
       - name: Install repo-stream
         run: pip install repo-stream
       - name: Run repo-stream update
-        run: repo-stream mondeja
+        run: |
+          git config --global user.email "mondejar1994@gmail.com"
+          git config --global user.name "Álvaro Mondéjar"
+          repo-stream mondeja
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
