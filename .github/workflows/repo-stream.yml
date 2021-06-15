@@ -22,4 +22,4 @@ jobs:
           git config --global user.name "Álvaro Mondéjar"
           repo-stream mondeja
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_USER_TOKEN }}
