@@ -1,4 +1,3 @@
-```yaml
 name: repo-stream update
 
 on:
@@ -21,4 +20,3 @@ jobs:
         run: repo-stream mondeja
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-```
