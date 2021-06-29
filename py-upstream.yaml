@@ -1,9 +1,9 @@
 repos:
   - repo: https://github.com/mondeja/pre-commit-hooks
-    rev: v1.2.1
+    rev: v1.3.0
     hooks:
       - id: add-pre-commit-hook
         args:
           - -repo=https://github.com/mondeja/pre-commit-hooks
           - -id=dev-extras-required
-          - -rev=v1.2.1
+          - -rev=v1.3.0
