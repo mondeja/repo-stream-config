@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  repo-stream-update:
+  freenom-autorenew:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: 3.x
       - name: Install freenom-autorenew
-        run: pip install mondeja-pre-commit-hooks
+        run: pip install mondeja-pre-commit-hooks requests
       - name: Run freenom-autorenew
         run: freenom-autorenew-hook
         env:
