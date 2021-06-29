@@ -1,0 +1,23 @@
+name: freenom-autorenew
+
+on:
+  schedule:
+    - cron: 0 4 * * *
+  workflow_dispatch:
+
+jobs:
+  repo-stream-update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - name: Install freenom-autorenew
+        run: pip install mondeja-pre-commit-hooks
+      - name: Run freenom-autorenew
+        run: freenom-autorenew-hook
+        env:
+          FREENOM_EMAIL: ${{ secrets.FREENOM_EMAIL }}
+          FREENOM_PASSWORD: ${{ secrets.FREENOM_PASSWORD }}
