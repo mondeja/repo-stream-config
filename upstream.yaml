@@ -1,13 +1,13 @@
 repos:
   - repo: https://github.com/mondeja/pre-commit-hooks
-    rev: v1.3.0
+    rev: v1.5.2
     hooks:
       - id: add-pre-commit-hook
         name: add-root-editorconfig-required-pre-commit-hook
         args:
           - -repo=https://github.com/mondeja/pre-commit-hooks
           - -id=root-editorconfig-required
-          - -rev=v1.3.0
+          - -rev=v1.5.1
       - id: add-pre-commit-hook
         name: add-editorconfig-checker-pre-commit-hook
         args:
