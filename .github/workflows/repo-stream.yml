@@ -16,10 +16,14 @@ jobs:
           python-version: 3.x
       - name: Install repo-stream
         run: pip install repo-stream
-      - name: Run repo-stream update
+      - name: Configure GIT
         run: |
           git config --global user.email "mondejar1994@gmail.com"
           git config --global user.name "Álvaro Mondéjar"
-          repo-stream mondeja
+      - name: Run repo-stream
+        uses: mondeja/repo-stream@v1.3.0
+        with:
+          usernames: mondeja
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_USERNAME: mondeja
