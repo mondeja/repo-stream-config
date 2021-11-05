@@ -8,6 +8,7 @@ module.exports = {
   platform: 'github',
   autodiscover: true,
   autodiscoverFilter: "mondeja/*",
+  includeForks: false,
   requireConfig: false,
   logLevel: 'debug',
 };
