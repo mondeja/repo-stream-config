@@ -10,6 +10,7 @@ module.exports = {
   requireConfig: false,
   logLevel: 'debug',
   forkMode: true,
+  forkToken: process.env.RENOVATE_TOKEN,
   //autodiscoverFilter: "mondeja/*",
   //includeForks: false,
   repositories: [
