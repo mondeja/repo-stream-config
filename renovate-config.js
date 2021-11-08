@@ -9,6 +9,7 @@ module.exports = {
   autodiscover: false,
   requireConfig: false,
   logLevel: 'debug',
+  forkMode: true,
   //autodiscoverFilter: "mondeja/*",
   //includeForks: false,
   repositories: [
