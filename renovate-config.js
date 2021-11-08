@@ -12,9 +12,9 @@ module.exports = {
   //autodiscoverFilter: "mondeja/*",
   //includeForks: false,
   repositories: [
-    //"mondeja/actix-react-starter-template",
-    "mondeja/cartocss-doc-parser",
-    /*"mondeja/compile-time-create-file",
+    "mondeja/actix-react-starter-template",
+    /*"mondeja/cartocss-doc-parser",
+    "mondeja/compile-time-create-file",
     "mondeja/django-svelte-start",
     "mondeja/http-request-codegen",
     "mondeja/hunspellcheck",
